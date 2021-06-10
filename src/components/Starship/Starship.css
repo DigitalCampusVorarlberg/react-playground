@@ -1,0 +1,11 @@
+.starship {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: lightcoral;
+    border-radius: 10px;
+}
+
+.starship h3 {
+    margin-top: 0;
+}

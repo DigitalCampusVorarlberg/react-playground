@@ -1,11 +1,13 @@
+import './Navbar.css';
+
 function Navbar({logoUrl, menuItems}) {
     return (
-        <div>
-            <img src={logoUrl} alt="logo" />
-            <div>
+        <div className="navbar-wrapper">
+            <img className="logo" src={logoUrl} alt="logo" />
+            <div className="nav">
                 <ul>
                     {menuItems.map(menuItem => {
-                        return <li><a href={menuItem.url}>{menuItem.title}</a></li>
+                        return <li key={menuItem.url}><a href={menuItem.url}>{menuItem.title}</a></li>
                     })}
                 </ul>
             </div>
