@@ -1,0 +1,16 @@
+.cars {
+    width: 100%;
+}
+
+.cars tr:nth-child(even) {background-color: #f2f2f2;}
+
+.cars th {
+    text-align: left;
+    font-size: 18px;
+}
+
+.cars td {
+    text-align: left;
+    font-size: 14px;
+}
+

@@ -1,0 +1,23 @@
+
+.submit-form {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.submit-form form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+}
+
+.submit-form form input {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
+
+.submit-form form button {
+    font-size: 16px;
+    padding: 5px 10px;
+    margin: 5px 0;
+}
