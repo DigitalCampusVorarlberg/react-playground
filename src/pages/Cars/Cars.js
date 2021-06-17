@@ -1,13 +1,13 @@
 import axios from "axios";
 import {useEffect, useState} from "react";
 import './Cars.css';
+import {getCars} from "../../services/HttpService";
 
 function Cars() {
 
     const [cars, setCars] = useState([]);
     useEffect(() => {
-        axios.get('https://60c31121917002001739df29.mockapi.io/api/cars').then(result => {
-            console.log(result.data);
+        getCars().then(result => {
             setCars(result.data);
         });
     }, []);
