@@ -3,30 +3,28 @@ import {useEffect, useState} from "react";
 import './Cars.css';
 import {getCars} from "../../services/HttpService";
 import {Link} from "react-router-dom";
+import {useCarStore} from "../../state/stores";
 
 function Cars() {
 
-    const [cars, setCars] = useState([]);
-    useEffect(() => {
-        getCars().then(result => {
-            setCars(result.data);
-        });
-    }, []);
+    const cars = useCarStore(state => state.cars);
 
     return (
         <div>
             <h1>Cars for sale</h1>
             <table className="cars">
                 <thead>
-                    <th>Brand</th>
-                    <th>Model</th>
-                    <th>Power</th>
-                    <th/>
+                    <tr>
+                        <th>Brand</th>
+                        <th>Model</th>
+                        <th>Power</th>
+                        <th/>
+                    </tr>
                 </thead>
                 <tbody>
                 {cars.map(car => {
                     return (
-                        <tr>
+                        <tr key={car.id}>
                             <td>{car.brand}</td>
                             <td>{car.model}</td>
                             <td>{car.hp}</td>
