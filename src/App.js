@@ -11,9 +11,18 @@ import Cars from "./pages/Cars/Cars";
 import Home from "./pages/Home/Home";
 import SubmitCar from "./pages/SubmitCar/SubmitCar";
 import CarDetails from "./pages/CarDetails/CarDetails";
+import {useCarStore} from "./state/store";
+import {useEffect} from "react";
+import Login from "./pages/Login/Login";
 
 function App() {
     const items = [{title: "Start", url: "/"}, {title: "Cars", url: "/cars"}, {title: "Submit", url: "/submit"}];
+    const fetchCars = useCarStore(state => state.fetchCars);
+
+    useEffect(() => {
+        fetchCars();
+    }, []);
+
 
     return (
         <Router>
@@ -27,6 +36,9 @@ function App() {
                         </Route>
                         <Route path="/cars">
                             <Cars />
+                        </Route>
+                        <Route path="/login">
+                            <Login />
                         </Route>
                         <Route path="/submit">
                             <SubmitCar />

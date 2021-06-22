@@ -24,6 +24,20 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/pages/Cars/Cars.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/state/store.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=":" />
+            </Attribute>
+          </value>
+        </entry>
       </map>
     </option>
   </component>

@@ -3,16 +3,11 @@ import {useEffect, useState} from "react";
 import './Cars.css';
 import {getCars} from "../../services/HttpService";
 import {Link} from "react-router-dom";
+import {useCarStore} from "../../state/store";
 
 function Cars() {
 
-    const [cars, setCars] = useState([]);
-    useEffect(() => {
-        getCars().then(result => {
-            setCars(result.data);
-        });
-    }, []);
-
+    const cars = useCarStore(state => state.cars);
     return (
         <div>
             <h1>Cars for sale</h1>

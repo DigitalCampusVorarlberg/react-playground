@@ -1,16 +1,17 @@
 import {useParams} from "react-router-dom";
 import {getCarById} from "../../services/HttpService";
 import {useEffect, useState} from "react";
+import {useCarStore} from "../../state/store";
 
 function CarDetails() {
     let {id} = useParams();
-    const [car, setCar] = useState();
+    const setCurrentCar = useCarStore(state => state.setCurrentCar);
+    const car = useCarStore(state => state.currentCar);
+    const cars = useCarStore(state => state.cars);
 
     useEffect(() => {
-        getCarById(id).then(result => {
-            setCar(result.data);
-        });
-    }, []);
+        setCurrentCar(id);
+    }, [cars]);
 
     return (
         <>
