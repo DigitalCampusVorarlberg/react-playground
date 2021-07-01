@@ -28,7 +28,7 @@ function App() {
         <Router>
 
             <div className="App">
-                <Navbar logoUrl="https://logoipsum.com/logo/logo-24.svg" menuItems={items}/>
+                <Navbar logoUrl="https://logoipsum.com/logo/logo-24.svg" menuItems={items} />
                 <Layout>
                     <Switch>
                         <Route path="/cars/:id">

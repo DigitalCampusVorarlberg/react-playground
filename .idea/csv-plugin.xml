@@ -10,6 +10,13 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/components/Alert/Alert.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/components/Navbar/Navbar.css">
           <value>
             <Attribute>
@@ -24,10 +31,24 @@
             </Attribute>
           </value>
         </entry>
+        <entry key="/src/pages/CarDetails/CarDetails.js">
+          <value>
+            <Attribute>
+              <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
         <entry key="/src/pages/Cars/Cars.js">
           <value>
             <Attribute>
               <option name="separator" value=";" />
+            </Attribute>
+          </value>
+        </entry>
+        <entry key="/src/pages/SubmitCar/SubmitCar.js">
+          <value>
+            <Attribute>
+              <option name="separator" value="," />
             </Attribute>
           </value>
         </entry>
